@@ -1,6 +1,20 @@
 sources:
-  - name: demp_src
-  tables:
-    - name: aircrafts
-    - name: airports
-    - name: seats
+  - name: demo_src
+    description: Данные из БВ авиаперелетов
+    tables:
+      - name: aircrafts
+        description: Модели самолетов
+        columns:
+          - name: aircraft_code
+            description: Код модели самолета
+            tests: 
+              - not_null
+              - unique
+          - name: model
+            description: Название модели самолета
+          - name: range
+            description: Неизвестное поле
+      - name: airports
+        description: Аэропорты
+      - name: seats
+        description: Места в самолетах

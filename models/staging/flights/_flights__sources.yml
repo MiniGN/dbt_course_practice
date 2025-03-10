@@ -18,3 +18,12 @@ sources:
         description: Аэропорты
       - name: seats
         description: Места в самолетах
+      - name: bookings
+        freshness:
+          warn_after: 
+            count: 6
+            period: hour
+          error_after:
+            count: 10000
+            period: day
+        loaded_at_field: book_date::timestamp

@@ -27,3 +27,7 @@ sources:
             count: 10000
             period: day
         loaded_at_field: book_date::timestamp
+      - name: boarding_passes
+      - name: flights
+      - name: ticket_flights
+      - name: tickets
